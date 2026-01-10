@@ -16,12 +16,22 @@ section
 div
 p
 
-
+h1 - h6
+ol+li
+ul+li
 
 ========= string 
 
+span
 
 
+========= other
+a (Допускается вкладывать блочные теги)
+img
+br
+
+========= key
+shift + alt + w  in  tag
 
 
 
