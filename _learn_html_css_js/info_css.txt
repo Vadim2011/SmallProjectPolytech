@@ -1,0 +1,29 @@
+
+tag {}
+
+.class {}
+
+#id {}
+
+tag.class {}
+
+.class tag {}
+
+.firstlevel>p {} # 1я вложенность
+
+
+# null style  file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
