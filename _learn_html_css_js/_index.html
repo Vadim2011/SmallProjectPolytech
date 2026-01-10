@@ -7,55 +7,73 @@
   <title>Password generator</title>
 </head>
 <body>
-  <header>
-    <nav>
-      content <br>
-      <a href="./products.html">products</a><br>
-      <a href="./products.html" target="_blank">products</a>
-    </nav>
-    Lorem ipsum dolor sit amet consectetur.
-  </header>
-  <main>
-    <h1>title</h1>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing.
-    </p>
-    <p>Lorem ipsum dolor sit <a href="products.html">product</a> consectetur adipisicing elit. Cum rem inventore maxime optio voluptatibus omnis fuga unde quae minus earum a repudiandae reiciendis non tempore, laboriosam commodi ea atque repellat?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-    <h3>subtitle</h3>
-    <ol>
-      <li>Lorem ipsum dolor sit amet.</li>
-      <li>Lorem ipsum dolor sit amet.</li>
-      <li>Lorem ipsum dolor sit amet.</li>
-    </ol>
-    <p>
-      Lorem ipsum dolor sit, amet <br> consectetur adipisicing elit. In nesciunt eaque eos.
-    </p>
-    <h2>subtitle</h2>
-    <h3>subsubtitle</h3>
+  
+  <form action="#" method="get">
+    <div>
+      <div>name</div>
+      <input tabindex="1" placeholder="name" name="usname" type="text">
+    </div>
 
-    <h2>subtitle</h2>
-    <h3>subsubtitle</h3>
-    <section>content</section>
-    <div>content</div>
-    Lorem ipsum dolor sit amet consectetur.
-    <p>
-      span <br>
-      <span>Lorem ipsum dolor sit amet consectetur.</span>
-      <span>Lorem, ipsum dolor.</span>
-    </p>
-    <img src="/img/18.jpg" alt="notebook" width="500px">
-    <ul>
-      <li>1</li>
-      <li>2</li>
-    </ul>
-    <ol>
-      <li>4</li>
-      <li>5</li>
-    </ol>
-  </main>
-  <footer>
-    Lorem ipsum dolor sit amet consectetur.
-  </footer>  
+    <div>
+      <div>pass</div>
+      <input tabindex="2" name="Password" type="password">
+    </div>
+
+    <div>
+      <div>tel</div>
+      <input tabindex="3" name="tel" type="tel">
+    </div>
+
+    <div>
+      <div>gender</div>
+      <input tabindex="4" name="gend" type="radio" value="F">
+      <input tabindex="4" name="gend" type="radio" value="M" checked> 
+    </div>
+
+    <div>
+      <div>
+        <span>prop1</span><br>
+        <input tabindex="5" type="checkbox" name="prop1" value="prop1">
+      </div>
+      <div>
+        <span>prop2</span><br>
+        <input tabindex="6" type="checkbox" name="prop2">
+      </div>
+      <div>
+        <span>prop3</span><br>
+        <input tabindex="7" type="checkbox" name="prop2" checked>
+      </div>
+      <div>
+        <span>prop4</span><br>
+        <input tabindex="8" type="checkbox" name="prop2" disabled>
+      </div>
+    </div>
+
+    <div>
+      <div>area_text</div>
+      <textarea name="area" tabindex="9"></textarea>
+    </div>
+
+    <div>
+      <div>photo</div>
+      <div>
+        <input type="file" tabindex="10">
+      </div>
+    </div>
+
+    <div>
+      <p>color</p>
+      <!-- multiple -->
+      <select name="color" tabindex="11">
+        <option value="1">red</option>
+        <option value="2">green</option>
+        <option value="3">blue</option>
+      </select>
+    </div>
+
+  <button tabindex="12" type="submit">sub</button>
+  <button  tabindex="13" type="reset">reset</button>
+  </form>
+
 </body>
 </html>

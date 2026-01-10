@@ -11,24 +11,38 @@ html
 header > nav
 main
 footer
-
 section
 div
 p
 
 h1 - h6
+
 ol+li
 ul+li
+
+form  > action='site' method='get/post' enctype="multipart/form-data"
+input
 
 ========= string 
 
 span
+input / text / tel / password / radio / checkbox / email (other)
+textarea
+select + option (multiple)
+button type="reset"
+button type="submit"
 
+  disable
+  placeholder
+  tabindex
 
 ========= other
 a (Допускается вкладывать блочные теги)
 img
 br
+
+
+
 
 ========= key
 shift + alt + w  in  tag
