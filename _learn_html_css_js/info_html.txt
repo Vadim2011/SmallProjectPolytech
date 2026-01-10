@@ -1,0 +1,44 @@
+html 
+  head
+  head
+  body
+  ...
+  body
+html 
+
+
+========= block
+header > nav
+main
+footer
+
+section
+div
+p
+
+
+
+========= string 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
