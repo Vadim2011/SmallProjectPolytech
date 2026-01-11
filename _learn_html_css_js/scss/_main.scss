@@ -1,0 +1,46 @@
+
+
+.block {
+  font-style: italic;
+}
+
+// вложенность 
+.block {
+  color: red;
+  span {
+    color: green;
+  }
+}
+
+.block {
+  color: red;
+  span {
+    color: green;
+    .block__text {
+      color: blue;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
