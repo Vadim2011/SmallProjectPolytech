@@ -1,3 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.other-clss {
+  border: 1px solid #000;
+}
+
+.any_block {
+  width: 31.25%;
+}
+
+.other-clss {
+  font-size: 100px;
+}
+
 .block {
   font-style: italic;
 }
@@ -18,4 +35,45 @@
 }
 .block span .block__text {
   color: blue;
+}
+
+.scss-div {
+  color: #aa2;
+}
+.scss-div > .scss-p {
+  color: #2aa;
+}
+
+.link:hover {
+  color: red;
+}
+.link:active {
+  text-transform: uppercase;
+}
+.link:focus {
+  text-decoration: line-through;
+}
+
+.cart__body::first-letter {
+  font-size: 30px;
+}
+.cart__title {
+  font-style: italic;
+}
+.cart__text {
+  font-weight: 100;
+}
+.cart .cart--big {
+  font-size: 40px;
+  color: #aaa;
+}
+.cart.cart--big {
+  font-size: 10px;
+}
+
+.link-a:hover {
+  display: none;
+}
+.other-class .link-a {
+  display: none;
 }

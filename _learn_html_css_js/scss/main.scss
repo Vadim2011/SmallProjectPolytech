@@ -1,4 +1,42 @@
+// import =====================
+@import "null.scss";
 
+// variable =====================
+$fz: 18px;
+$color_1: #000;
+$color_2: #00f;
+
+// template =====================
+%tpl_border {
+  border: 1px solid #000;
+}
+// or
+// .tpl_border {
+//   border: 1px solid #000;
+// }
+// @extend .tpl_border;
+
+// mixin =====================
+@mixin fontz($f) {
+  font-size: $f;
+}
+// .other-clss {
+//   @include fontz(100px);
+// }
+
+// math =====================
+.any_block {
+  width: 300px / 960px * 100%;
+}
+
+
+.other-clss {
+  @extend %tpl_border;
+}
+
+.other-clss {
+  @include fontz(100px);
+}
 
 .block {
   font-style: italic;
@@ -13,8 +51,8 @@
 }
 
 .block {
-  
-  font-size: 18px;
+
+  font-size: $fz;
   color: red;
   span {
     color: green;
@@ -25,12 +63,60 @@
   
 }
 
+.scss-div {
+  color: #aa2;
+  >.scss-p {
+    color: #2aa;
+  }
+}
+
+.link {
+  &:hover {
+    color: red;
+  }
+  &:active {
+    text-transform: uppercase;
+  }
+  &:focus {
+    text-decoration: line-through;
+  }
+}
+
+.cart {
 
 
+  &__body {
+    &::first-letter {
+      font-size: 30px;
+    }
+  }
 
+  &__title {
+    font-style: italic;
+  }
 
+  &__text {
+    font-weight: 100;
+  }
 
+  .cart--big {
+    font-size: 40px;
+    color: #aaa;
+  }
 
+  &.cart--big {
+    font-size: 10px;
+  }
+}
+
+.link-a {
+  &:hover {
+    display: none;
+  }
+  .other-class & {
+    display: none;
+  }
+}
 
 
 
