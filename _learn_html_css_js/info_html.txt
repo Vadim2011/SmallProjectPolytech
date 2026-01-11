@@ -36,6 +36,46 @@ button type="submit"
   placeholder
   tabindex
 
+========= meta 
+<meta name='' content=''>
+<meta http-equiv='' content=''>
+<meta property='' content=''>
+
+отображение / сео / тех теги / соц.сети
+<meta charset="UTF-8">
+# fix
+<meta name='viewport' content='width=1170'>
+# adaptive
+<meta name='viewport' content='width=device-width'>
+# adaptive 2
+<meta name='viewport' content='width=device-width,
+initial-scale=1.0, maximum-sxale=1.0, user-scalable=0'>
+
+<meta name='format-detection' conent='telephone=no'>
+
+SEO
+<meta name="description" cnontent='140 letter'>
+<meta name='keywords' content='20 words'>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='robots' content='noimageindex,nofollow'>
+<meta name='robots' content='none'>
+
+tech
+<meta name="Author" content='name'>
+<meta name='Copyright' content='name'>
+<meta name='Address' content='address...'>
+
+redirect 
+(if 404)
+<meta http-equiv='refresh' content='15; url=index.html'>
+
+social net
+
+
+
+
+
+
 ========= other
 a (Допускается вкладывать блочные теги)
 img
