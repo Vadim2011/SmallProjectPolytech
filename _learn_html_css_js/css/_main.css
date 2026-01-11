@@ -38,33 +38,149 @@ h1, h2, h3, h4, h5, h6  {
   font-weight: 400;
 }
 
-div {
-  font-size: 16px;
-  color: blue;
+/* ========================= */
+
+body {
+  font-family:'Times New Roman', Times, serif;
 }
 
-span {
-  font-size: 22px;
-  color: red;
+p {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.biggreen {
-  font-size: 32px;
-  color: green;
+.fontsize20 {
+  font-size: 20;
 }
 
-span.sspan {
+.italic {
   font-style: italic;
 }
 
-.headdiv .indiv {
-  color: aqua;
+.font700 {
+  font-weight: 700;
 }
 
-.firstlevel>p {
-  font-weight: 900;
+.color {
+  color: #f33;
 }
 
+.textright {
+  text-align: right;
+}
+
+.textdecor {
+  text-decoration: underline;
+}
+
+.textshadow {
+  text-shadow: 2px 2px 1px #239;
+}
+
+.texttransform {
+  text-transform: uppercase;
+}
+
+.textindent {
+  text-indent: 40px;
+}
+
+.letterspacing {
+  letter-spacing: 4px;
+}
+
+.wordspacing {
+  word-spacing: 10px;
+}
+
+.witespace {
+  white-space:nowrap;
+}
+
+.lineheight {
+  line-height: 1.2;
+}
+
+.padd {
+  padding: 20px;
+}
+
+.marg {
+  margin: 20px;
+}
+
+.wid {
+  width: 100%;
+}
+
+.max-wid {
+  max-width: 100px;
+}
+
+.w-max-w {
+  width: 100%;
+  max-width: 500px;
+}
+
+.height {
+  height: 100px;
+}
+
+.overflov {
+  overflow: visible;
+  overflow: hidden;
+  overflow: scroll;
+  overflow: auto;
+}
+
+.display {
+  display: block;
+}
+
+.example-block {
+  border: 1px solid #3a4;
+
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.example-block2 {
+  margin: 20px;
+  outline: 3px solid #a99;
+  box-shadow: 3px 3px 5px 3px #00a, inset 2px 2px 3px 5px #a00;
+  /* opacity: 0.5; */
+  /* display: none; */
+  /* visibility: hidden; */
+}
+
+.example-string {
+  font-size: 30px;
+  outline: 3px solid #a99;
+
+}
+
+.example-img{
+  max-width: 500px;
+  border: 1px solid #882;
+  border-radius: 10px 30px 5px 50px;
+}
+
+.block {
+  margin: 30px 50px;
+  height: 660px;
+  background-color: #23a;
+  /* background-color: rgba(121, 25, 220,0.8); */
+  /* background-image: url('../img/default.png'); */
+  /* background: linear-gradient(to bottom, rgba(222, 111, 23,0.8) 0%, rgba(87,22, 111, 0.2) 100%); */
+  /* background-image: url('../img/default.png'); */
+  /* background-repeat: no-repeat; */
+  /* background-position: 50% 50%; */
+  /* background-attachment: fixed; */
+  /* background-size: 80%; */
+  /* background-size: contain; */
+  /* background-size: cover; */
+  /* background: url("../img/18.jpg") top left / 20% 20% no-repeat, url("../img/256.jpg") bottom left / 20% 20% no-repeat, url("../img/TTTTT.jpg") 50% 50% / cover, #00a; */
+
+}
 
 
 

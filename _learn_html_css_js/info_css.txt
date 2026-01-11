@@ -1,3 +1,8 @@
+# elements
+# parametr
+  # propet
+  # value
+
 
 tag {}
 
@@ -14,9 +19,26 @@ tag.class {}
 
 # null style  file
 
+/* opacity: 0.5; */
+  /* display: none; */
+  /* visibility: hidden; */
+
+bachground
+  background-color: #23a;
+  /* background-color: rgba(121, 25, 220,0.8); */
+  /* background-image: url('../img/default.png'); */
+  /* background: linear-gradient(to bottom, rgba(222, 111, 23,0.8) 0%, rgba(87,22, 111, 0.2) 100%); */
+  /* background-image: url('../img/default.png'); */
+  /* background-repeat: no-repeat; */
+  /* background-position: 50% 50%; */
+  /* background-attachment: fixed; */
+  /* background-size: 80%; */
+  /* background-size: contain; */
+  /* background-size: cover; */
+  /* background: url("../img/18.jpg") top left / 20% 20% no-repeat, url("../img/256.jpg") bottom left / 20% 20% no-repeat, url("../img/TTTTT.jpg") 50% 50% / cover, #00a; */
 
 
-
+psevdo
 
 
 
