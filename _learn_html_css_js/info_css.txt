@@ -51,11 +51,27 @@ psev-class
     .list-pse li:hover::before
                     !     !
 
-                    
+
+position 
+  relative
+  absolute
+  fixed 
+  sticky
 
 
-
-
+for animation 
+.list-pse-pos li {
+  position: relative;
+.list-pse-pos li::before {
+  content: '';
+  background: #000;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  border-radius: 50%;
+}
 
 
 

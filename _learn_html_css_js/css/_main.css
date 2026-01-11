@@ -308,13 +308,84 @@ p {
 .list-pse li:hover::before {
   background-color: green;
 }
+/*  position 
+ липкий_хедер поп_ап */
+
+.block-pos {
+  margin: 0 auto;
+  max-width: 800px;
+  height: 400px;
+  border: 1px solid #005;
+  position: relative;
+}
+
+.block-pos div {
+  line-height: 2;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.block-pos__1 {
+  background-color: yellow;
+}
+
+.block-pos__2 {
+  background-color: magenta;
+  /* position: static; */
+  position: relative;
+  left: 50px;
+  top: 50px;
+  /* right: 0;
+  bottom: 0; */
+  z-index: -1; 
+}
+
+.block-pos__3 {  
+  width: 100%;
+  background-color: aqua;
+  position: absolute;
+  top: 30;
+  left: 20;
+  opacity: 0.5;
+}
 
 
 
+.block-pos__4 {
+  background-color: yellow;
+}
 
+.block-pos__5 {
+  width: 40%;
+  background-color: magenta;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
 
+.block-pos__6 {  
+  background-color: aqua;
+  position:sticky;
+  top: 0%;
+}
 
+.list-pse-pos li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
 
+.list-pse-pos li::before {
+  content: '';
+  background: #000;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  border-radius: 50%;
+}
 
 
 
