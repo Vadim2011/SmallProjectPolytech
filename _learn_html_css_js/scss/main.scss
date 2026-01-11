@@ -1,5 +1,6 @@
 // import =====================
 @import "null.scss";
+@import "fonts.scss";
 
 // variable =====================
 $fz: 18px;
@@ -28,6 +29,15 @@ $color_2: #00f;
 .any_block {
   width: 300px / 960px * 100%;
 }
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.pt-sans-regular {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 
 .other-clss {
@@ -96,7 +106,8 @@ $color_2: #00f;
   }
 
   &__text {
-    font-weight: 100;
+    font-weight: 700;
+    font-family: 'My_font';
   }
 
   .cart--big {
@@ -105,7 +116,9 @@ $color_2: #00f;
   }
 
   &.cart--big {
-    font-size: 10px;
+    font-size: 20px;
+    font-family: 'My_font';
+    font-weight: 500;
   }
 }
 
