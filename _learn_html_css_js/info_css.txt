@@ -38,7 +38,20 @@ bachground
   /* background: url("../img/18.jpg") top left / 20% 20% no-repeat, url("../img/256.jpg") bottom left / 20% 20% no-repeat, url("../img/TTTTT.jpg") 50% 50% / cover, #00a; */
 
 
-psevdo
+psev-elem
+  visitd
+  hover
+  active
+  focus
+  nth-child(odd/even)
+
+psev-class
+  after
+  before
+    .list-pse li:hover::before
+                    !     !
+
+                    
 
 
 
