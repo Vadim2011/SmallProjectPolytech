@@ -1,0 +1,21 @@
+.block {
+  font-style: italic;
+}
+
+.block {
+  color: red;
+}
+.block span {
+  color: green;
+}
+
+.block {
+  font-size: 18px;
+  color: red;
+}
+.block span {
+  color: green;
+}
+.block span .block__text {
+  color: blue;
+}
