@@ -197,6 +197,114 @@ body {
 .what__title {
   margin-bottom: 33px;
 }
+.colums {
+  background-color: #aaa;
+  padding: 50px 0;
+}
+.colums__title {
+  text-align: center;
+  margin-bottom: 22px;
+}
+.colums__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -8px;
+}
+.colums__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  margin-bottom: 20px;
+  padding: 0 8px;
+}
+.item__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.item__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 200px;
+          flex: 0 0 200px;
+}
+.item__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-left: 15px;
+}
+.item__title {
+  margin-bottom: 20px;
+}
+.vertical {
+  padding: 30px 0;
+}
+.vertical__title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.vertical__body {
+  max-width: 990px;
+  margin: 0 auto;
+}
+.vertical__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -20px;
+}
+.vertical__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3333%;
+          flex: 0 1 33.3333%;
+  padding: 0 20px;
+}
+.vertical__item {
+  height: 100%;
+  background-color: #444;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.vertical__subtitle {
+  text-align: center;
+}
+.vertical__label {
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #444;
+}
+.vertical__text {
+  padding: 20px;
+  color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.vertical__text p {
+  padding: 0 0 10px 0;
+}
+.vertical__text p:last-child {
+  padding: 0;
+}
+.vertical__btn {
+  display: block;
+  margin: 0 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  line-height: 2;
+}
+
 .footer {
   background-color: #888;
 }
