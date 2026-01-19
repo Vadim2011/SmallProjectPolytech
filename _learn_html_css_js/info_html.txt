@@ -148,6 +148,14 @@ title - универсальный
   .footer__logo .logo
 
 
+=========== скрыть
+hidden 
+
+<img hidden ..>
+img[hidden] {display: none;}
+opacity: 0
+visibility:hidden
+position: absolute; top: -100%;
 
 
 

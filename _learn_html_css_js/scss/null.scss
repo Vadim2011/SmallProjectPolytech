@@ -11,11 +11,20 @@
 	box-sizing: border-box;
 }
 
-html,
-body {
-  min-height: 100%;
-}
+// html,
+// body {
+//   height: 100%;
+// }
+  
+// html {
+//   height: 100%;
+// }
 
+// body {
+//   height: 100%;
+
+// }
+  
 /* Links */
 
 a, a:link, a:visited  {
@@ -79,6 +88,17 @@ button, input[type="submit"] {
     background-color: transparent;
     background: none;
     cursor: pointer;
+}
+
+button {
+  // appearance: none;
+  // -webkit-appearance: none; /* Для совместимости с WebKit */
+  // -moz-appearance: none;    /* Для совместимости с Firefox */
+  // background-color: #007bff;
+  // color: white;
+  // border: none;
+  // padding: 10px 20px;
+  // border-radius: 5px;
 }
 
 button::-moz-focus-inner {

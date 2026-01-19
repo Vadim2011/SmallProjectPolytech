@@ -12,11 +12,6 @@
           box-sizing: border-box;
 }
 
-html,
-body {
-  min-height: 100%;
-}
-
 /* Links */
 a, a:link, a:visited {
   text-decoration: none;
