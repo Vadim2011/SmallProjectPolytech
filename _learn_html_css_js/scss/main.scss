@@ -391,8 +391,8 @@ body {
 
     object-fit: cover;  // 3 variant
     object-position: center;
+  }
 }
-
 .source {
   height: 400px;
   background-color: #339;
@@ -418,17 +418,106 @@ body {
 
 
 // ========== transform ( el block)
+.transform__item1,
+.transform__item2,
+.transform__item3,
+.transform__item4,
+.transform__item5,
+.transform__item6,
+.transform__item7,
+.transform__item8 {
+  width: 500px;
+  height: 100px;
+  background-color: #222;
+  margin-bottom: 30px;
+  transition: all 1s ease 0s;
+}
 
+.transform__item1:hover {
+  transform: translate(30px, 30px);
+}
 
+.transform__item2:hover {
+  transform: scale(90%);
+}
 
+.transform__item3:hover {
+  transform: rotate(360deg);
+}
 
+.transform__item4:hover {
+  transform: skew(20deg,30deg);
+}
 
+.transform__item5 {
+  transform-origin: 0 0;
+}
 
+.transform__item5:hover {
+  transform: rotate(360deg);
+}
 
+.section-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
 
+// grid ==============
+//  grid-lines
+//  grid-truck
+//  grid-cell
+//  grid-area
+//  grid-items
+//
 
+.grid-1 {
+  display: grid;
+  background-color: #681;
+  padding: 30px;
 
+  &__item {
+    margin: 10px;
+    background: #a39;
+  }
+}
 
+.grid-2 {
+  margin: 20px 0;
+  padding: 30px;
+
+  display: grid;
+  grid-template-columns: minmax(50px, 180px) 1fr 250px auto;
+  // fit-content(200px) == auto (max-with 200)
+  // grid-template-rows: repeat(3, 100px);
+
+  background-color: #681;
+
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-rows: 20px 30px;
+  // не явная сетка если больше 2строк
+  // grid-auto-rows: 50px; 1-20 2-30 3,4..-50
+  // grid-auto-flow: //dense //column //row;
+
+  &__item {
+    margin: auto;
+    padding: 10px;
+    // justify-content: center;
+    // align-items: center;
+    background: #a39;
+  }
+}
+
+.grid-item1 {
+  grid-column: span 2; // 2 / 4
+  grid-row: span 2;
+}
+
+.grid-item2 {
+
+}
+
+.grid-item3 {
+
+}
 
 
 
