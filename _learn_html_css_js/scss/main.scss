@@ -520,6 +520,48 @@ body {
 }
 
 
+// Единицы измерения
+// 1 абсолютные
+// 2 относительные
+
+// 1
+// px (16px brauser default)
+// 
+
+// 2
+// em (font-size inherit) 
+// rem (font-size in html or brauser)
+// % 
+// vw
+// vh
+// vmin
+// vmax
+
+@function prc($pxOne, $pxTwo) {
+  $result: math.div($pxOne, $pxTwo) * 100%;
+  @return $result;
+}
+
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+@function em($px) {
+  $result: math.div($px, 16) + em;
+  @return $result;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
