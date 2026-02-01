@@ -18,6 +18,7 @@ console.log('hello world start');
 // ==================
 function ibg() {
   let ibg=document.querySelectorAll(".ibg");
+  console.log(ibg);
   for (var i = 0; i < ibg.length; i++){
     if(ibg[i].querySelector('img')){
       ibg[i].style.backgroundImage='url(' + 
@@ -25,8 +26,10 @@ function ibg() {
     }
   }
 }
-// ibg();
+console.log('==========================');
+ibg();
 
+console.log('==========================');
 25; // литералы целого числа
 34.5; // литералы дробного числа
 "js asdf" // литералы строки
@@ -258,12 +261,17 @@ function less() {console.log('less');}
 console.log(calcS(5, 4, more, less));
 
 // recursion  10_000
+function fff() { console.log('fff ------ ')};
 
 // function expresion 
 // ! только после создания
 let fexp = function () {
   console.log('f expretion');
 };
+
+let f_ex = function () {
+  console.log('f expretion');
+}();
 
 fexp();
 
@@ -289,7 +297,7 @@ let name_v2 = () => {
 
 function showN(num) {
   console.log(num);
-  if (num < 5) {
+  if (num < 2) {
     setTimeout(showN, 1000, ++num);
   }
 
@@ -442,14 +450,26 @@ obj_5.foo();
 // 1 CamelCase
 // 2 call New
 
-function UserInfo(name) {
+function UserInfo (name) {
   this.name = name;
   this.age = 30;
+}
+
+class UserInfo1 {
+  constructor(name) {
+    this.name = name;
+    this.age = 30;
+  }
 }
 
 console.log(new UserInfo('qqqq'));
 let mmm = new UserInfo('zzzz');
 console.log(mmm);
+
+console.log(new UserInfo1('qqqq'));
+let nnn = new UserInfo1('zzzz');
+console.log(nnn);
+console.log(typeof(nnn));
 
 // Math
 Math.floor(0);
@@ -508,6 +528,521 @@ console.log('asdf'.includes('df'));
 
 'asdf'.slice(2,4);
 'asdf'.slice(-2, -1);
+
+
+//  array ----------
+
+let array = [
+  "adf",
+  123,
+  12.22,
+  true
+];
+
+array[2];
+
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6], 
+  [7, 8, 9]
+];
+
+matrix.length;
+matrix[0] = [0, 0, 0];
+matrix[3] = [0, 0, 0];
+
+// Очередь, упорядоченный порядок
+// Стек
+
+arr = [1, 2, 3];
+arr.push(8);
+console.log(arr);
+arr.shift();
+console.log(arr);
+arr.pop();
+console.log(arr);
+arr.unshift(0, 9);
+console.log(arr);
+delete arr[2];
+console.log(arr);
+arr[2] = 9
+console.log(arr);
+arr.push(8);
+console.log(arr);
+arr.push(8);
+console.log(arr);
+
+arr.splice(1, 2);
+console.log(arr); 
+
+arr.splice(1, 1, 'fff');
+console.log(arr); 
+
+arr.splice(1, 0, 'asdf', 'asdf');
+console.log(arr); 
+
+// copy array
+let new_array = arr.slice(1,3);
+console.log(new_array); 
+
+new_array = arr.slice();
+console.log(new_array); 
+
+let n_arr = arr.concat('qwer');
+console.log(arr); 
+console.log(n_arr); 
+
+console.log(arr.indexOf(33)); // -1
+console.log(arr.lastIndexOf(8));
+console.log(arr.includes('asdf'));
+
+// find(item, inde, array)
+
+let _arr = [
+  {n: 'asdf', a: 23}, 
+  {n: 'ddd', a: 3}, 
+  {n: 'fff', a: 2},
+];
+
+console.log(_arr.find(function (item, index, _arr) {
+  return item.a === 3;
+}));
+
+let res_find = _arr.find(item => item.a === 23);
+console.log(res_find);
+
+let res_indfind = _arr.findIndex(item => item.a === 23);
+console.log(res_indfind, '=========');
+
+// filter
+
+console.log(_arr.filter(item => item.a > 1));
+
+// sort
+console.log(arr.sort());
+
+function compareNum(a, b) {
+  // if (a > b) return 1;
+  // if (a == b) return 0;
+  // if (a < b) return -1;
+
+  return a - b
+}
+
+console.log([1, 4, 2, 6, 9, 2, 0, 4, 6].sort(compareNum));
+
+console.log([1, 4, 2, 6, 9, 2, 0, 4, 6].sort((a, b) => a - b));
+
+// reverse 
+console.log([1, 4, 2, 6, 9, 2, 0, 4, 6].reverse());
+
+// map 
+let map_arr = [1, 2, 3, 4, 5].map(item => item**2);
+console.log(map_arr);
+
+// str.split
+str = 'asdf,qwer,zxcv';
+console.log(str);
+
+let str_arr = str.split(',')
+console.log(str_arr);
+
+console.log(str_arr.join('-'));
+console.log(String(str_arr));
+
+
+console.log(typeof(arr));
+console.log(typeof(obj));
+
+console.log(Array.isArray(arr));
+console.log(Array.isArray(obj));
+
+arr = [1, 3, 3, 5, 9, 9]
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
+
+// for (const i of arr) {
+//   console.log(i);
+// }
+
+// for (let i of arr) {
+//   console.log(i);
+// }
+
+// arr.forEach(function (item, index, array) {
+//   console.log(item, index, array); 
+// });
+
+// arr.forEach(item => console.log(item));
+
+let my_foo = i => console.log(i**2);
+arr.forEach(my_foo);
+
+arr.map(my_foo);
+
+// redice
+// let v = arr.reduce(function(previosValue, item, index, array){
+
+//}, [init])
+
+let res;
+res = arr.reduce((prev, item) => prev * item, 1);
+console.log(res);
+
+res = arr.reduce((prev, item) => String(prev) + String(item));
+console.log(res);
+
+res = arr.reduceRight((prev, item) => String(prev) + String(item));
+console.log(res);
+
+// copy 
+console.log(arr.slice());
+console.log(Object.assign({}, obj));
+
+// DOM - document object model
+// BOM - brauser object model
+// enviroment JS + dop
+
+//           window
+// DOM         BOM        JS
+// document  navigator    object
+//           location     array
+//           history      function
+//
+
+// window.innerWidth;
+// window.innerHeight;
+
+// location.href;
+
+// переход на другую страницу
+// location.href = "https://google.com"
+// http://127.0.0.1:5500/_learn_html_css_js/_index.html
+
+
+// alert('asdf');
+// let boool = confirm('asdaaaa aaa');
+// let promtRes = prompt('aaaaaa');
+
+// CSSOM
+
+
+console.log(document);
+
+let hhh = document.documentElement;
+console.log(hhh);
+
+let bd = document.body;
+console.log(bd);
+console.log(bd.div);
+let hd = document.head;
+console.log(hd);
+
+let chNode = bd.childNodes;
+// tag   node
+// text  node
+// comment node
+
+// navigation
+
+// el.hasChildNodes()
+
+// Collection ==================
+for (let node of chNode) {
+  console.log(node);
+}
+
+// Нет методов массива
+// Живые (актуальное состойние)
+// только для чтения
+// требуются другие методы
+
+// previousSiblingNode
+// nextSiblingNode
+// parentNode
+console.log(chNode);
+let chn = bd.children;
+console.log(chn);
+
+// previousElementSibling
+// nextElementSibling
+// parentElement
+// firstElementChild
+// children 
+
+const elem_ = document.querySelectorAll('.ibg');
+// document.querySelectorAll('.ibg')
+// document.querySelectorAll('li')
+// document.querySelectorAll('#ibg')
+// document.querySelectorAll('.ibg>img')
+// document.querySelectorAll('[data-item]')
+// document.querySelectorAll('[href="/goods"]')
+
+//  Collections Static
+
+console.log(elem_[1]);
+console.log('====================');
+
+for (let i of elem_) {
+  console.log(i);
+}
+console.log('====================');
+
+elem_.forEach(i => console.log(i))
+
+console.log('====================');
+let sub_el = elem_[0].querySelectorAll('img');
+
+for (let i of sub_el) {
+  console.log(i);
+}
+
+// получить первый подходящий
+// document.querySelector('.page-img__three');
+
+// document.getElementById('my_id');
+
+// возвращает Живую коллекцию
+// document.getElementsByClassName('name_class');
+
+// возвращает Живую коллекцию
+// document.getElementsByTagName('div');
+
+// document.getElementsByName('input_name_text');
+
+// Живая коллекция   Статическая коллекия
+// Изменеия видны      только то что изначально получили
+
+// ===============================
+// ===============================
+// ===============================
+
+// closest  поиск вверх
+res = elem_[0].closest('.parents_el');
+
+// проверка
+bbb = elem_[0].matches('[class$="lesson_item"');
+
+//  ПОЛУЧИТЬ ЭЛ/содерж 
+//     ПРОВЕРИТЬ 
+//         ИЗМЕНИТЬ 
+//               СОЗДАТЬ
+// querySelector
+// querySelectorAll
+// getElementById
+// getElementsByTagName
+// getElementsByName
+// closest               matches     innerHTML
+
+
+// ПОЛУЧИТЬ ИЗМЕНИТЬ
+// elem_[0].innerHTML('aaaaaaaaa');
+let h_1 = bd.querySelector('h1');
+console.log(h_1);
+
+let txt_h1 = h_1.innerHTML;
+console.log(txt_h1);
+
+function innerTxt(el, txt) {
+  el.innerHTML = txt_h1 + txt + '<span>JJJJ</span>';
+}
+
+setTimeout(innerTxt, 3000, h_1, 'aaaaa JS');
+
+// tag + content
+// let tag_txt = h_1.outerHTML;
+// h_1.outerHTML = '<h1> outer Html </h1>';
+
+let txt = h_1.textContent;
+h_1.textContent = '<p> asdf </p>';
+console.log(txt);
+
+// СОЗДАТЬ ЭЛЕМЕНТ но не вставили
+const new_el = document.createElement('div');
+console.log(new_el);
+
+new_el.innerHTML = '<p> NEW DIV </p>';
+console.log(new_el);
+
+// document.createAttribute
+// document.createAttributeNS
+// document.createCDATASection
+// document.createComment
+// document.createDocumentFragment
+// document.createElement
+// document.createElementNS
+// document.createEvent
+// document.createExpression
+// document.createNSResolver
+
+
+// ВСТАВИТЬ ЭЛ (создаем эл, получаем куда, вставл)
+let test_d = document.querySelector('.test-div');
+
+
+// БЕЗОПАСНАЯ ВСТАВКА (не работают тэги)
+// удаляют на старом месте переносят на новое
+//  перед эл
+// test_d.before(new_el);
+
+//  после эл
+// test_d.after(new_el);
+
+//  перед содерж эл
+// test_d.prepend(new_el);
+
+//  после сод эл
+// test_d.append(new_el);
+
+// ===================
+// ВСТАВКА ТЭГОВ не как текст
+let test_d1 = document.querySelector('.test1-div');
+let test_d2 = document.querySelector('.test2-div');
+let test_d3 = document.querySelector('.test3-div');
+let test_d4 = document.querySelector('.test4-div');
+let test_d5 = document.querySelector('.test5-div');
+let button = document.querySelector('button');
+
+// test_d1.insertAdjacentHTML
+// test_d1.insertAdjacentElement
+// test_d1.insertAdjacentText
+
+test_d1.insertAdjacentHTML('beforebegin',
+'<div> beforebegin ---- </div>');
+
+test_d2.insertAdjacentHTML('afterbegin',
+'<div> afterbegin ---- </div>');
+
+test_d3.insertAdjacentHTML('beforeend',
+'<div> beforeend ---- </div>');
+
+test_d4.insertAdjacentHTML('afterend',
+'<div> afterend ---- </div>');
+
+// Копирование NODE (глубокое клонирование)
+
+let copy_el = button.cloneNode();
+let copy_el2 = button.cloneNode(true);
+
+let copy_el3 = button.cloneNode();
+let copy_el4 = button.cloneNode(true);
+
+test_d5.before(copy_el);
+test_d5.after(copy_el2);
+test_d5.prepend(copy_el3);
+test_d5.append(copy_el4);
+
+// УДАЛЕНИЕ
+setTimeout(() => button.remove() , 3000);
+
+
+//  ПОЛУЧИТЬ ЭЛ/содерж 
+//     ПРОВЕРИТЬ 
+//         ИЗМЕНИТЬ 
+//               СОЗДАТЬ
+//                  КЛОНИРОВАТЬ
+//                     УДАЛИТЬ
+//                        ВТАВИТЬ ЭЛ
+//                            ВСТАВИТЬ HTML
+
+
+// CLASS  ================
+// ПОЛУЧЕНИЕ 
+//     УДАЛЕНИЕ  
+//       ДОБАВЛЕНИЕ 
+//         СПИСОК_КЛАССОВ
+//            ПЕРЕКЛЮЧЕНИЕ
+let cl_el = document.querySelector('[data-el]');
+console.log(cl_el);
+
+let cl = cl_el.className;
+console.log(cl);
+
+let cl_list = cl_el.classList;
+console.log(cl_list);
+console.log(cl_list.length);
+
+
+setTimeout(() => cl_list.add('new-class'), 1000);
+setTimeout(() => cl_list.remove('new-class'), 2000);
+setTimeout(() => cl_list.toggle('new-class'), 3000);
+setTimeout(() => console.log(cl_list.contains('new-class')), 4000);
+
+
+
+// CSS ================
+let st_el = document.querySelector('.test6-div');
+st_el.style.color = 'red';
+st_el.style.position = 'relative';
+st_el.style.zIndex = '3';
+st_el.style.marginTop = '30px';
+
+console.log(st_el.style);
+
+console.log(st_el.style.position);
+
+// Перезапишет все свойства
+st_el.style.cssText = `
+  padding-bottom: 20px;
+  font-weight: 800;
+`;
+
+// Возвращает все вычесленные стили
+// Только чтение
+let g_st = getComputedStyle(st_el);
+console.log(g_st.fontSize);
+
+let g_st_before = getComputedStyle(st_el, '::before');
+console.log(g_st_before.paddingTop);
+
+// Получаем все вычесленные стили
+//  Забираем значение нужного
+//   Убираем px
+
+const _g_st = getComputedStyle(st_el);
+const bord_st = _g_st.paddingLeft;
+const res_st = parseInt(bord_st);
+
+st_el.style.paddingLeft = String(res_st + 130) + 'px';
+
+// Получение Свойств
+let g_a = document.querySelector('.aaa');
+console.log(g_a.href);
+console.log(g_a.classList);
+console.log(g_a.style);
+console.dir(g_a);
+
+// Работа с
+//   Классами
+//     Стилями
+//       Атрибутами
+
+// Проверить  Получить  Задать  Удалить
+console.log(g_a.hasAttribute('name'));
+console.log(g_a.getAttribute('name'));
+g_a.setAttribute('name', 'value');
+console.log(g_a.getAttribute('name'));
+g_a.removeAttribute('name');
+
+// Атрибут data зарезервировано программистами
+console.log(g_a.dataset.size);
+console.log(g_a.dataset.w);
+
+g_a.dataset.size = '33333';
+g_a.dataset.w = 'vvvvvv';
+
+console.log(g_a.dataset.size);
+console.log(g_a.dataset.w);
+console.log(g_a.dataset.bigSmall);
+
+// elem_.tagName;
+// elem_.hidden;
+
+
+
+
 
 
 
