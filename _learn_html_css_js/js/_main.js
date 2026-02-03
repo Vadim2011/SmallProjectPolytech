@@ -1040,20 +1040,162 @@ console.log(g_a.dataset.bigSmall);
 // elem_.tagName;
 // elem_.hidden;
 
+// Ширина Высота окна
+
+const mainElement = document.documentElement;
+const mainElementWidth = mainElement.clientWidth;
+const mainElementHight = mainElement.clientHeight;
+
+console.log(mainElementWidth, 'размер относительно окна браузера ширина');
+console.log(mainElementHight, 'размер относительно окна браузера высота');
+
+// + scroll (15px  17px)
+const windowWidth = window.innerWidth;
+const windowHight = window.innerHeight;
+
+console.log(windowWidth, 'размер относительно окна браузера ширина + скрол');
+console.log(windowHight, 'размер относительно окна браузера высота + скрол');
+
+console.log(document.body.scrollWidth,
+  document.body.offsetWidth,
+  document.body.clientWidth);
+
+
+console.log(document.documentElement.scrollWidth,
+  document.documentElement.offsetWidth,
+  document.documentElement.clientWidth,);
+
+console.log(document.body.scrollHeight,
+  document.body.offsetHeight,
+  document.body.clientHeight,);
+  
+  
+console.log(document.documentElement.scrollHeight,
+  document.documentElement.offsetHeight,
+  document.documentElement.clientHeight,);
+
+// Чаще
+// mainElement.clientWidth;
+// mainElement.clientHeight;
+
+// WIDTH HIGHT _____________
+// высота и ширина + прокручеваемая часть
+let scrollWidth = Math.max(
+  document.body.scrollWidth,
+  document.body.offsetWidth,
+  document.body.clientWidth,
+
+  document.documentElement.scrollWidth,
+  document.documentElement.offsetWidth,
+  document.documentElement.clientWidth,
+)
+
+let scrollHight = Math.max(
+  document.body.scrollHeight,
+  document.body.offsetHeight,
+  document.body.clientHeight,
+
+  document.documentElement.scrollHeight,
+  document.documentElement.offsetHeight,
+  document.documentElement.clientHeight,
+)
+
+console.log(scrollWidth);
+console.log(scrollHight);
+
+// SCROLL _____________
+// кол-во прокученных пикселей (только чтение)
+// alias
+// const windowScrollTop = window.pageYOffset; 
+// const windowScrollLeft = window.pageXOffset;
+
+const windowScrollTop = window.scrollY;
+const windowScrollLeft = window.scrollX;
+
+console.log(windowScrollTop);
+console.log(windowScrollLeft);
+
+// setInterval(() => console.log(window.scrollY), 500);
+
+// Управление прокруткой страницы
+// scrollBy(x, y) step   scrollTo(x, y) absolute
+
+function setScrollBy() {
+  window.scrollBy(0, 600);
+  const windowScrollTop = window.scrollY;
+  console.log(windowScrollTop);
+}
+
+// setTimeout(setScrollBy, 1000);
+// setInterval(() => window.scrollBy(0, 50), 500);
+// setInterval(() => window.scrollTo(0, 600), 500);
+
+// html {
+//   scroll-behavior: smooth;
+// }
+
+// window.scrollTo({
+//   top: 100,
+//   left: 0,
+//   behavior: 'smooth'
+// })
+
+// Прокрутка к элементу
+const toElementScroll = document.querySelector('.two-block');
+toElementScroll.scrollIntoView({
+  block:'center',
+  inline:'nearest',
+  behavior:'smooth'
+});
+
+// body.scroll-lock {
+//   overflow: hidden;
+// }
+
+setTimeout(() => document.body.classList.toggle('scroll-lock'), 5000);
+setTimeout(() => document.body.classList.toggle('scroll-lock'), 8000);
+// document.body.classList.toggle('scroll-lock');
+
+// Scroll element
+// offsetParent - сдвиг относительно родителя (родитель)
+const block_scroll = document.querySelector('.block-scroll');
+block_scroll.scrollIntoView({
+  block:'center',
+  inline:'nearest',
+  behavior:'smooth'
+});
 
 
 
+console.log(block_scroll.offsetParent, '\nродительский эл. сдвиг относ которого');
+console.log(block_scroll.offsetTop, '\nсдвиг сверху');
+console.log(block_scroll.offsetLeft, '\nсдвиг лево');
+
+console.log(block_scroll.offsetWidth, '\nРазмер блока ширина');
+console.log(block_scroll.offsetHeight, '\nРазмер блока высота');
+
+console.log(block_scroll.clientTop, '\nОтступ блока сверху');
+console.log(block_scroll.clientLeft, '\nОтступ блока слева');
+
+console.log(block_scroll.clientWidth, '\nШирина без рамки и скрола');
+console.log(block_scroll.clientHeight, '\nВысота без рамки и скрола');
+// 500 - 2bord - 2bord - 15 = 481
+
+console.log(block_scroll.scrollWidth, '\nШирина  + cont скрол');
+console.log(block_scroll.scrollHeight, '\nВысота + cont скрол');
+
+block_scroll.scrollTop = 60;
+block_scroll.scrollBy(0, 40);
+
+// clientY - window       pageY - document
+
+console.log(block_scroll.getBoundingClientRect(), '\nclientY - window');
+console.log(block_scroll.getBoundingClientRect().top + window.scrollY, '\npageY - document');
+console.log(window.scrollY, '\scrollY - window');
+console.log(window.pageYOffset, '\pageYOffset - window');
 
 
-
-
-
-
-
-
-
-
-
+console.log(document.elementFromPoint(100, 300), 'elementFromPoint(100, 300)');
 
 
 
