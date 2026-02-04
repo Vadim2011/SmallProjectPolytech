@@ -1195,6 +1195,141 @@ console.log(window.scrollY, '\scrollY - window');
 console.log(window.pageYOffset, '\pageYOffset - window');
 
 
+
+
+// EVENTS   CLICK
+// Добавление/Удаление слушателя события
+
+// 1
+// Html <div onclick = 'foo'>
+
+function foo_() {
+  console.log('foo click');
+}
+
+// 2
+const btn = document.querySelector('.btn-click');
+// btn.onclick = () => console.log('btn click');
+
+// 3
+function btn_click() {
+  console.log('btn click');
+}
+// btn.onclick = btn_click;
+
+// 4 AddEventList  RemoveEventList
+// el.addEventListener(event, handler, options)
+function click() { 
+  console.log('__click');
+  btn.removeEventListener('click',click);
+}
+function clack() { console.log('clack__')}
+
+btn.addEventListener("click", click);
+btn.addEventListener("click", clack);
+
+const options = {
+  "capture":false, // фаза на которой должен сработать обработчик
+  "once":true, // если Т обработчик удален после выполнения
+  "passive": false // если Т обработчик не вызовет preventDefault()
+}
+
+function cluck() {
+  console.log('__cluck__');
+}
+
+btn.addEventListener('click', cluck, options);
+
+
+function clock(e) {
+  console.log('--clock--');
+
+  // тип события
+  console.log(e.type); 
+
+  // Объект на который сработал обработчик
+  console.log(e.target);
+
+  // Объект к которому назначен обработчик
+  console.log(e.currentTarget);
+
+  // Положение курсора по оси X
+  console.log(e.clientX);
+
+  // Положение курсора по оси Y
+  console.log(e.clientY);
+
+  // Все детали события
+  console.log(e);
+}
+
+btn.addEventListener('click', clock);
+btn.addEventListener('mouseenter', clock, options);
+
+// // Всплытие / Погружение
+const block_1 = document.querySelector('.block__1');
+const block_2 = document.querySelector('.block__2');
+const block_3 = document.querySelector('.block__3');
+
+block_1.addEventListener('click', (e)=>{
+  console.log('block 1');
+  console.log(e.target);
+});
+block_2.addEventListener('click', (e)=>{console.log('block 2');
+console.log(e.target);
+}, {"capture":true}); // Поружение  Редко (осн всплытие)
+block_3.addEventListener('click', (e)=>{console.log('block 3');
+console.log(e.target);
+// Остановка всплытия
+e.stopPropagation();
+},options);
+
+{/* <div 1 > v   // погружение "capture":true
+    <div 2 > v
+        <div 3 > v
+        </div> ^ // всплытие "capture":false
+    </div> ^
+</div> ^
+ */}
+
+//  Делигирование события
+function foo() {
+  console.log('foo -------');
+}
+// const btn_n = document.querySelectorAll('.btn__1');
+// btn_n.forEach((item) => item.addEventListener('click', foo))
+
+const button_n = document.querySelector('.button-n');
+button_n.addEventListener('click',
+  function (event) {
+    if (event.target.closest('.btn__1')) {
+      foo();
+    }
+  }
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.log(document.elementFromPoint(100, 300), 'elementFromPoint(100, 300)');
 
 
