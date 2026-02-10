@@ -578,6 +578,93 @@ body.scroll-lock {
 
 }
 
+// .menu1 {
+//   width: 300px;
+
+
+//   &__button {
+//     width: 100%;
+//     display: block;
+//     height: 30px;
+//     background-color:yellow;
+//   }
+
+//   &__list {
+//   }
+
+//   &__link {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: gray;
+//     height: 30px;
+//     border-bottom: 1px solid #222;
+
+//     &:hover{
+//       color: #fff;
+//       transition: all 0.3s ease;
+//     }
+    
+//   }
+// }
+
+// .hidden1 {
+//   display: none;
+// }
+
+.menu1 {
+  display: inline-block;
+}
+
+.menu1._active .menu1__list {
+  display: block;
+}
+
+.menu1 .menu1__list {
+  display: none;
+}
+
+.menu1._active .menu1__button span:first-child {
+  display: none;
+}
+
+.menu1._active .menu1__button span:last-child {
+  display: block;
+}
+
+.menu1__button span:first-child {
+  display: block;
+}
+
+.menu1__button span:last-child {
+  display: none;
+}
+
+.menu1__list {
+  background-color: #776088;
+  padding: 15px;
+}
+
+.menu1__list li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.menu1__link {
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.menu1__link:hover {
+  color: #888;
+}
+
+
+
+
+
+
+
+
+
 
 
 

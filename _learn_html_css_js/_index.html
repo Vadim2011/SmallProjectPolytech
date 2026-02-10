@@ -181,6 +181,49 @@
               </div>
             </div>
         </div>
+        <textarea maxlength="30"
+          name="ttext" 
+          class="textarea__item"
+          style="width:200px;
+          height:150px;
+          font-weight: 700;">
+        </textarea>
+        <span class="textarea__span">
+          Осталось <span></span> символов
+        </span>
+        <form name="ffform" action="#" method="get" class="form">
+          <fieldset>
+            forma 
+
+            <label>input 1
+              <input type="text" name="text" placeholder="pllaceholder">
+            </label><br>
+            <label>textarea 
+              <textarea name="txtar"cols="30" rows="3"></textarea>
+            </label><br>
+            <label>radiobutton
+              <input type="radio" name="radio1" value="1">
+              <input type="radio" name="radio1" value="2">
+            </label><br>
+            <label>check
+              <input type="checkbox" name="check1" value="3">
+              <input type="checkbox" name="check2" value="3">
+            </label><br>
+            <label> selectd_field
+              <select name="select">
+                <option value="1" >10</option>
+                <option value="2">20</option>
+                <option value="3" selected>30</option>
+                <option value="4">40</option>
+              </select>
+            </label><br>
+            <label>
+              <input type="file" name="ff">
+              <input type="submit" value="submit">
+            </label>
+
+          </fieldset>
+        </form>
 
 
         <div class="block-scroll" onclick="console.log('click')">
@@ -229,6 +272,24 @@
 
       </div>
     </main>
+
+    <nav class="menu1"> 
+      <button class="menu1__button">
+        <span>Открыть меню</span>
+        <span class="">Закрыть меню</span>
+      </button>
+      <ul class="menu1__list">
+        <li><a href="#" class="menu1__link">Пункт 1</a></li>
+        <li><a href="#" class="menu1__link">Пункт 2</a></li>
+        <li><a href="#" class="menu1__link">Пункт 3</a></li>
+        <li><a href="#" class="menu1__link">Пункт 4</a></li>
+
+      </ul>
+    </nav>
+
+    <button class="bbtn">
+      ccclick
+    </button>
 
   <footer class="footer">
     <div>Lorem, ipsum dolor.</div>

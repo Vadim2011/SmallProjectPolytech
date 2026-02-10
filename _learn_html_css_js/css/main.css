@@ -485,3 +485,51 @@ body.scroll-lock {
   border: 2px solid #5e5;
   overflow: auto;
 }
+
+.menu1 {
+  display: inline-block;
+}
+
+.menu1._active .menu1__list {
+  display: block;
+}
+
+.menu1 .menu1__list {
+  display: none;
+}
+
+.menu1._active .menu1__button span:first-child {
+  display: none;
+}
+
+.menu1._active .menu1__button span:last-child {
+  display: block;
+}
+
+.menu1__button span:first-child {
+  display: block;
+}
+
+.menu1__button span:last-child {
+  display: none;
+}
+
+.menu1__list {
+  background-color: #776088;
+  padding: 15px;
+}
+
+.menu1__list li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.menu1__link {
+  color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.menu1__link:hover {
+  color: #888;
+}

@@ -1306,24 +1306,243 @@ button_n.addEventListener('click',
       foo();
     }
   }
-)
+);
 
 
 
+const mm = document.querySelector('.menu1');
+document.addEventListener('click', mmenu);
+
+function mmenu(e) {
+  if (e.target.closest('.menu1__button')) {
+    mm.classList.toggle('_active');
+  }
+  if (!e.target.closest('.menu1')) {
+    mm.classList.remove('_active');
+  }
+}
+
+document.addEventListener('keyup', function (e) {
+  if (e.code === 'Escape') {
+    mm.classList.remove('_active');
+    console.log('-------- escape')
+  }
+})
+
+// Отменить действие по умолчанию
+// preventDefault
+
+const ll = document.querySelectorAll('.menu1__link');
+
+ll.forEach((item) => {
+  item.addEventListener('click', e => {
+    console.log('aaa --');
+    e.preventDefault();
+    // onclick   return false
+  });
+})
+
+// Событи Мыши
+// mousedown / mouseup 
+// mouseover / mouseout
+// mousemove
+// constextmenu 
+
+// click - mousedown + mouseup
+// dblclick - 2 click 
+
+const bbtn = document.querySelector('.bbtn');
+
+bbtn.addEventListener('mousedown', (e) => console.log('btn down',e.which));
+bbtn.addEventListener('click', () => console.log('btn click'));
+bbtn.addEventListener('contextmenu', () => console.log('btn context menu'));
+
+// block_1.addEventListener("mousemove", (e) => {
+//   console.log(e.clientX);
+//   // console.log(e.clientY);
+// });
+
+// всплывают действия
+block_1.addEventListener("mouseover", (e) => {
+  console.log('mouse over');
+  console.log(e.target);
+  console.log(e.relatedTarget);
+});
+
+block_1.addEventListener("mouseout", (e) => {
+  console.log('mouse out');
+});
+
+// Не всплывают
+block_1.addEventListener("mouseenter", (e) => {
+  console.log('mouse enter');
+  console.log(e.target);
+  console.log(e.relatedTarget);
+});
+
+
+block_1.addEventListener("mouseleave", (e) => {
+  console.log('mouse leave');
+});
+
+// КЛАВИШИ
+document.addEventListener("keydown", (e) => {
+  console.log(`${e.code} === ${e.key}`);
+  console.log(e.repeat);
+});
+
+document.addEventListener("keyup", (e) => {
+  console.log(`${e.code} === ${e.key}`);
+});
+
+const txtItem = document.querySelector('.textarea__item');
+const textItemLimit = txtItem.getAttribute('maxlength');
+const txtCounter = document.querySelector('.textarea__span span');
+
+txtCounter.innerHTML = textItemLimit;
+
+txtItem.addEventListener('keyup', txtSetCounter);
+txtItem.addEventListener('keydown', (e) => {
+  if (e.repeat) txtSetCounter();
+});
+
+function txtSetCounter() {
+  const txtCounterResult = textItemLimit - txtItem.value.length;
+  txtCounter.innerHTML = txtCounterResult;
+}
+
+// SCROLL
+window.addEventListener('scroll', (e) => {
+
+  console.log(scrollY);
+})
+
+// ЗАГРУЗКА СТРАНИЦЫ
+// DOMContentLoaded - загрузиз документ
+// load  - загрузил докум и внешн. рес
+// BeforeUnloadEvent 
+// beforeunload - пользователь покид стр
+// unload - пользователь покид стр
 
 
 
+// document.readyState(
+//   ['loading' (загружается) |
+//   'interactive' (полностью загруж) |
+//   'complete' (полностью прочитан)
+// ]);
+
+document.addEventListener('DOMContentLoaded',
+readyDom);
+
+window.addEventListener('load', readyLoad);
+
+function readyDom() {
+  console.log(document.readyState);
+}
+
+function readyLoad() {
+  console.log(document.readyState);
+}
+
+// window.addEventListener('beforeunload', (e) => {
+//   e.preventDefault();
+//   e.returnValue = '';
+// })
+
+// FORM
+const mainform = document.forms[0];
+console.log(mainform);
+
+const mainform1 = document.forms.ffform;
+console.log(mainform1);
+  
+console.log(document.forms);
+// collection
+for (let i of document.forms) {
+  console.log(i);
+}
+
+console.log(mainform1.elements);
+
+// const mainFormInput = mainform1.elements.text;
+const mainFormInput = mainform1.text;
+console.log(mainFormInput);
+
+// collections
+console.log(mainform1.radio1);
+
+console.log(mainform1.radio1[0].value);
+console.log(mainform1.radio1[0].checked);
+console.log(mainFormInput.value);
+
+// mainFormInput.value = 'aaaaffff';
+
+mainform1.radio1[1].value = 'llll';
+const rad2 = mainform1.radio1[1];
+rad2.checked = true;
+
+console.log(mainform1.radio1[1].value);
+console.log(mainform1.radio1[1].checked);
+
+console.log(mainform.select);
+
+console.log(mainform?.select?.options);
+console.log(mainform?.select?.selectedIndex);
+console.log(mainform?.select?.value);
+console.log(mainform?.select?.options[2].text);
+
+// option.selected
+// option.index
+// option.text
+
+const mainFormSelect = mainform.select;
+mainFormSelect.options[2].selected = true;
+// mainFormSelect.selectedIndex = 1;
+// mainFormSelect.value = 2;
+
+// option = new Option(text, 
+//                   value,
+//                   defaultSelected,
+//                   selected);
+
+// text - текст внутри 
+// value - значение
+// defaultSelected - если true HTML selected
+// selected - если true 
+
+let newOption = new Option('ttext', '4', false, false)
+mainFormSelect.append(newOption);
+
+let formSelected = Array.from(
+    mainFormSelect.options)
+    .filter(option => option.selected)
+    .map(option => option.value);
 
 
+let placeHold = mainFormInput.placeholder;
+
+// mainFormInput.addEventListener('focus', function(e) {
+//   mainFormInput.placeholder = '';
+// })
 
 
+// mainFormInput.addEventListener('blur', function(e) {
+//   mainFormInput.placeholder = placeHold;
+// })
 
+// tabindex = 0 // default
+// -1  // not focus tab yes focus js
 
+// События
+// focus  focusin 
+// change
+// input !!!
 
+// copy   /  paste  /  cut
 
-
-
-
+// СОБЫТИЕ input при вводе отправка, счет, проверка
+// СОБЫТИЕ submit проверка при отправке
 
 
 
