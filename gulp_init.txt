@@ -1,0 +1,6 @@
+npm init
+
+npm i gulp -D
+
+
+

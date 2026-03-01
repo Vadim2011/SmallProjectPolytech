@@ -1,0 +1,15 @@
+{
+  "name": "smallprojectpolytech",
+  "version": "1.0.0",
+  "description": "PolytechProject",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "V_Nikolaev",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.1"
+  }
+}
