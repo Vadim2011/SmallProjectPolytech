@@ -1,6 +1,39 @@
+# скачать установить node 
+# create directory
+# VS Code
+# open dir in VS Code
+# свойства VS Code запуск от имени Адм
+
+1) Create package.json
 npm init
 
+#   "main": "gulpfile.js",
+#   "type": "module",
+
+2) установить глобально  1 если не устанавливался
+npm i gulp-cli -g
+
+3) установить локально -D - для сохр gulp в зависим
 npm i gulp -D
+
+4) файловая структура
+- gulpfile.js
+- src
+- gulp
+  - config
+    - path.js
+    - plugins.js
+    - ftp.js
+  - task
+
+
+
+# режим разработчика
+npm run dev
+
+
+
+
 
 
 
