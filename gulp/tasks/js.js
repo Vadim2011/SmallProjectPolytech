@@ -9,13 +9,13 @@ export const js = () => {
       message: "Error: <%= error.message %>"
     }))
     )
-    .pipe(webpack({
-      mode:app.isBuild ? 'production' : 'development',
-      mode: 'development',
-      output: {
-        filename: 'app.js',
-      }
-    }))
+    // .pipe(webpack({
+    //   mode:app.isBuild ? 'production' : 'development',
+    //   mode: 'development',
+    //   output: {
+    //     filename: 'app.js',
+    //   }
+    // }))
     .pipe(app.gulp.dest(app.path.build.js))
     .pipe(app.plugins.browsersync.stream());
 }

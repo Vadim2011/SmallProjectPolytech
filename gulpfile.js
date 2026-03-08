@@ -33,15 +33,15 @@ function watcher() {
 }
 
 // Fonts
-const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle)
+// const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle)
 // Построение сценриев выполнения задач
-const tasksMain = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
+const tasksMain = gulp.parallel(copy, html, scss, js, images);
 // Отключить VPN
 const tasksWacherServer = gulp.parallel(watcher, server);
 
 
 // const tasksWacherServer = gulp.parallel(watcher);
-const dev = gulp.series(reset, tasksMain, tasksWacherServer);
+const dev = gulp.series(reset, images, tasksMain, tasksWacherServer);
 const build = gulp.series(reset, tasksMain)
 
 export { dev };

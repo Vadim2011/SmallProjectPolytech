@@ -1,29 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css?_v=20260303022248">
-  <link rel="stylesheet" href="css/style.min.css?_v=20260303022248">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генерация паролей, валидация СНИЛС, ИНН</title>
+    <meta name="description" content="учебный проект по генерации паролей, валидации СНИЛС, ИНН">
+    <link rel="stylesheet" href="css/style.css?_v=20260308061537">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
 </head>
+
 <body>
-  <header class="header">
-  <p>
-    header text TTITLE
-  </p>
-</header>
-  <p onclick="console.log('click p');">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    <span>
-      Obcaecati vitae doloribus consequuntur iure!
-    </span>
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eos quos. Animi!
-  </p>
-  <script src="js/app.js?_v=20260303022248"></script>
-  <script src="js/app.min.js?_v=20260303022248"></script>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__box">
+                    <div class="header__logo">
+                        <img src="img/folder24.png" alt="" class="img-logo">
+                    </div>
+                    <div class="header__text">
+                        Учебный проект для ИРНИТУ
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                <h1 class="title title__main">Генерация паролей, валидация СНИЛС, ИНН</h1>
+                <section class="pass">
+                    <h2 class="title title__pass">Генерация паролей</h2>
+                    <div class="pass__box">
+                        <div class="pass__amount">
+                            <div class="pass__amount-pass">
+                                <span>Количество паролей&ensp;</span>
+                                <select name="select-amount-pass">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5" selected>5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                </select>
+                            </div>
+                            <div class="pass__amount-char">
+                                <span>Количество символов&ensp;</span>
+                                <select name="select-amount-char">
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8" selected>8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="pass__setting">
+                            <div class="pass__item set">
+                                <div class="set__title">
+                                    Использовать <br>
+                                    алфавит
+                                </div>
+                                <div class="set__item">
+                                    <input type="checkbox" name="latin" checked>
+                                    <span>Латиницу</span>
+                                </div>
+                                <div class="set__item">
+                                    <input type="checkbox" name="cyrilic">
+                                    <span>Кирилицу</span>
+                                </div>
+                                <div class="set__item">
+                                    <input type="checkbox" name="number" checked>
+                                    <span>Цифры</span>
+                                </div>
+                                <div class="set__item">
+                                    <input type="checkbox" name="spec_symbol" checked>
+                                    <span>Спец. симв</span>
+                                </div>
+                            </div>
+                            <div class="pass__item set">
+                                <div class="set__title">
+                                    Верх/Ниж <br>
+                                    регистр
+                                </div>
+                                <div class="set__item">
+                                    <input type="checkbox" name="latin_up" checked>
+                                    <span>/</span>
+                                    <input type="checkbox" name="latin_lv" checked>
+                                </div>
+                                <div class="set__item">
+                                    <input type="checkbox" name="cirilic_up">
+                                    <span>/</span>
+                                    <input type="checkbox" name="cirilic_lv">
+                                </div>
+                            </div>
+                            <div class="pass__item set">
+                                <div class="set__title">
+                                    Использовать<br>
+                                    один символ 
+                                </div>
+                                <div class="set__item">
+                                    <input type="checkbox" name="latin_up_one">
+                                    <span>/</span>
+                                    <input type="checkbox" name="latin_lv_one">
+                                </div>
+                                <div class="set__item">
+                                    <input type="checkbox" name="cirilic_up_one">
+                                    <span>/</span>
+                                    <input type="checkbox" name="cirilic_lv_one">
+                                </div>
+                                <div class="set__item">
+                                    <span>&ensp;</span>
+                                </div>
+                                <div class="set__item">
+                                    <input type="checkbox" name="symbol_one">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pass__item char">
+                            <div class="set__title">
+                                Символы алфавита
+                            </div>
+                            <div class="char__items">
+                                <div class="char__item char__litin char-check">A</div>
+                                <div class="char__item char__litin char-check">B</div>
+                                <div class="char__item char__litin">C</div>
+                                <div class="char__item char__litin char-check">D</div>
+                                <div class="char__item char__litin char-check">E</div>
+                                <div class="char__item char__litin char-check">F</div>
+                                <div class="char__item char__litin char-check">G</div>
+                                <div class="char__item char__litin char-check">H</div>
+                                <div class="char__item char__litin ">I</div>
+                                <div class="char__item char__litin ">J</div>
+                                <div class="char__item char__litin char-check">K</div>
+                                <div class="char__item char__litin ">L</div>
+                                <div class="char__item char__litin char-check">M</div>
+                                <div class="char__item char__litin char-check">N</div>
+                                <div class="char__item char__litin ">O</div>
+                                <div class="char__item char__litin char-check">P</div>
+                                <div class="char__item char__litin char-check">Q</div>
+                                <div class="char__item char__litin char-check">R</div>
+                                <div class="char__item char__litin char-check">S</div>
+                                <div class="char__item char__litin char-check">T</div>
+                                <div class="char__item char__litin char-check">U</div>
+                                <div class="char__item char__litin char-check">V</div>
+                                <div class="char__item char__litin char-check">W</div>
+                                <div class="char__item char__litin ">X</div>
+                                <div class="char__item char__litin char-check">Y</div>
+                                <div class="char__item char__litin char-check">Z</div>
+                                </span>
+                            </div>
+                            <div class="char__items">                                
+                                <div class="char__item char__cyrilic char-check">А</div>
+                                <div class="char__item char__cyrilic char-check">Б</div>
+                                <div class="char__item char__cyrilic char-check">В</div>
+                                <div class="char__item char__cyrilic char-check">Г</div>
+                                <div class="char__item char__cyrilic char-check">Д</div>
+                                <div class="char__item char__cyrilic char-check">Е</div>
+                                <div class="char__item char__cyrilic">Ё</div>
+                                <div class="char__item char__cyrilic char-check">Ж</div>
+                                <div class="char__item char__cyrilic char-check">З</div>
+                                <div class="char__item char__cyrilic char-check">И</div>
+                                <div class="char__item char__cyrilic">Й</div>
+                                <div class="char__item char__cyrilic char-check">К</div>
+                                <div class="char__item char__cyrilic char-check">Л</div>
+                                <div class="char__item char__cyrilic char-check">М</div>
+                                <div class="char__item char__cyrilic char-check">Н</div>
+                                <div class="char__item char__cyrilic">О</div>
+                                <div class="char__item char__cyrilic char-check">П</div>
+                                <div class="char__item char__cyrilic char-check">Р</div>
+                                <div class="char__item char__cyrilic">С</div>
+                                <div class="char__item char__cyrilic char-check">Т</div>
+                                <div class="char__item char__cyrilic char-check">У</div>
+                                <div class="char__item char__cyrilic char-check">Ф</div>
+                                <div class="char__item char__cyrilic ">Х</div>
+                                <div class="char__item char__cyrilic char-check">Ц</div>
+                                <div class="char__item char__cyrilic char-check">Ч</div>
+                                <div class="char__item char__cyrilic ">Ш</div>
+                                <div class="char__item char__cyrilic ">Щ</div>
+                                <div class="char__item char__cyrilic ">Ъ</div>
+                                <div class="char__item char__cyrilic ">Ы</div>
+                                <div class="char__item char__cyrilic ">Ь</div>
+                                <div class="char__item char__cyrilic ">Э</div>
+                                <div class="char__item char__cyrilic char-check">Ю</div>
+                                <div class="char__item char__cyrilic char-check">Я</div>
+                            </div>
+                            <div class="char__items">
+                                <div class="char__item char__numb char-check">0</div>
+                                <div class="char__item char__numb char-check">1</div>
+                                <div class="char__item char__numb char-check">2</div>
+                                <div class="char__item char__numb char-check">3</div>
+                                <div class="char__item char__numb char-check">4</div>
+                                <div class="char__item char__numb char-check">5</div>
+                                <div class="char__item char__numb char-check">6</div>
+                                <div class="char__item char__numb char-check">7</div>
+                                <div class="char__item char__numb char-check">8</div>
+                                <div class="char__item char__numb char-check">9</div>
+                            </div>
+                            <div class="char__items">
+                                <div class="char__item char__symb ">!</div>
+                                <div class="char__item char__symb ">?</div>
+                                <div class="char__item char__symb ">@</div>
+                                <div class="char__item char__symb char-check">#</div>
+                                <div class="char__item char__symb char-check">$</div>
+                                <div class="char__item char__symb char-check">%</div>
+                                <div class="char__item char__symb ">^</div>
+                                <div class="char__item char__symb char-check">&</div>
+                                <div class="char__item char__symb char-check">*</div>
+                                <div class="char__item char__symb ">(</div>
+                                <div class="char__item char__symb ">)</div>
+                                <div class="char__item char__symb ">=</div>
+                                <div class="char__item char__symb ">+</div>
+                                <div class="char__item char__symb ">-</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="pass__bottom">
+                        <button class="pass__btn btn">Генерация</button>
+                    </div>
+                    <div class="pass__show">
+                    </div>
+                </section>
+
+                <section class="valid">
+                    <h2 class="title title__valid">Валидация СНИЛС, ИНН</h2>
+                    <div class="valid__box">
+                        <div class="snils">
+                            <div class="snils__valid">
+                                <div class="snils__input">
+                                    <legend>Введите СНИЛС</legend>
+                                    <input type="text" maxlength="14" placeholder="000-000-000 [00]" id="snils" value="">
+                                </div>
+                                <div class="snils__check">
+                                    <button class="snils__btn btn">Проверить</button>
+                                    <div class="snils__text">Контрольная сумма: <spnan class="snils__check-sum">&ensp;</spnan></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inn">
+                            <div class="inn__valid">
+                                <div class="inn__valid">
+                                    <div class="inn__input">
+                                        <legend>Введите ИНН &ensp;&ensp;</legend>
+                                        <input type="text" maxlength="12" placeholder="000000000000" id="inn" value="">
+                                    </div>
+                                    <div class="inn__check">
+                                        <button class="inn__btn btn">Проверить</button>
+                                        <div class="inn__text">Контрольная сумма: <spnan class="inn__check-sum">&ensp;</spnan></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="info">
+                    <div class="info__text">
+                        Использую в работе генерацию паролей для пользователей внутреннего контура.
+                        Необходимо создавать пароли от 6 до 8 символов, верхний и нижний регист, цифры, спец. символы. 
+                        Жалааатеельно использовать пароли которые легко набирать (1н спец. символ).
+                        Дополнительно в работе использую валидацию СНИЛЫ, ИНН.
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__box">
+                    &copy; Николаев Вадим Александрович АСУбз-23-1
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/app.js?_v=20260308061537"></script>
 </body>
+
 </html>
